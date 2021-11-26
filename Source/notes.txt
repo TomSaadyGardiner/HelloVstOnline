@@ -1,0 +1,20 @@
+pluginProcessor
+
+handles audio.
+
+prepareToPlay - called by host before playback
+processBlock - handles buffers between transport and plugin to prevent pops
+
+look inside these functions to see what happens and write code
+
+pluginEditor
+
+contains visual elements.
+
+//
+
+audio plugins depend on parameters to control the various parts of the DSP
+JUCE uses an object called the "audio processor value tree state" to
+coordinate syncing these parameters in the GUI with the variables in the DSP.
+
+so we need to declare a public one of these
